@@ -11,3 +11,16 @@ vim.keymap.set(
     "<leader>ee",
     "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
+
+vim.keymap.set("v", "m", '"zy:<C-U>Man <C-R>z<CR>', {
+  silent = true,
+  desc = "Open man page for selection",
+})
+
+vim.keymap.set("n", "M", function()
+  local word = vim.fn.expand("<cword>")
+  vim.cmd("Man " .. vim.fn.fnameescape(word))
+end, {
+  silent = true,
+  desc = "Open man page for word under cursor",
+})

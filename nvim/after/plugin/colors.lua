@@ -1,8 +1,19 @@
 local function colorscheme(color)
-	color = color or "rose-pine"
 	vim.cmd.colorscheme(color)
 end
 
-colorscheme()
+require("koda").setup {
+    transparent = true,
+    bold = false,
+
+    styles = {
+        functions = {
+            bold = false,
+        }
+    },
+}
+
+--colorscheme("koda-dark")
+colorscheme("lunaperche")
+--colorscheme("jellybeans-nvim")
 --colorscheme("gruvbox-material")
---colorscheme("kanagawa")

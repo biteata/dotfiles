@@ -8,9 +8,6 @@ vim.opt.relativenumber = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
---vim.opt.tabstop = 2
---vim.opt.softtabstop = 2
---vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
@@ -33,8 +30,7 @@ vim.opt.updatetime = 50
 --vim.cmd('autocmd BufNewFile,BufRead Jenkinsfile* setlocal filetype=groovy')
 --vim.cmd('autocmd BufNewFile,BufRead *.jenkinsfile setlocal filetype=groovy')
 
-
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "go",
-    command = "setlocal noexpandtab tabstop=4 shiftwidth=4"
+  pattern = "go",
+  command = "setlocal noexpandtab tabstop=4 shiftwidth=4"
 })
